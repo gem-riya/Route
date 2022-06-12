@@ -5,6 +5,7 @@ import Head from './components/Header/Head';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Category from './pages/Category';
+import Cat from './pages/Cat';
 
 const App = () => {
   return (
@@ -14,12 +15,12 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={<Home/>} />
           <Route path='/contact' element={<Contact/>} />
-          <Route  path='/category' element={<Category/>} />
+          <Route  path='/category' element={<Category/>} >
+            <Route path= ':id' element={<Cat/>} />
+          </Route>
           
         </Routes>
 
-
-        
       </BrowserRouter>
     </>
   );

@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 
 const Cat = () => {
   const {id} = useParams();
-  // console.log(params);
+  // console.log(id);
 
   const data={
     '121':{
@@ -12,8 +12,8 @@ const Cat = () => {
     } , 
     '122':{
       title:"L2",
-      description:"happy shopper"
-    }
+      description:"happy whopper"
+    },
   };
   return (
     <>

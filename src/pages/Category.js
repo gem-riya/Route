@@ -1,30 +1,26 @@
 import React from 'react'
-import { Link,  Route, Routes, useMatch } from 'react-router-dom'
+import { Link,  Outlet,  Route, Routes, useNavigate } from 'react-router-dom'
 import Cat from './Cat'
 const Category = () => {
-    const {url , path}= useMatch();
   return (
     <>
-    <div> <h2>Choose Category</h2>
-     <Routes>
-    <Route>
+    <div> 
+      <h3>Choose Category</h3>
+
     <ul>
         <li>
-            <Link to = {`${url}/121`}> L1 </Link>
+           <button> <Link to = {`/category/121`}> L1 </Link></button>
         </li>
         <li>
-            <Link to ={`${url}/122`}> L2 </Link>
+           <button> <Link to ={`/category/122`} style={{color:'green'}}> L2 </Link></button>
         </li>
     </ul>
-    </Route>
-    
-    <Route path= {`${path}/:id`} element={<Cat/>} />
-    </Routes>
 
+    <Outlet/>
+      
     </div>
 
-
-      
+  
     </>
   )
 }
