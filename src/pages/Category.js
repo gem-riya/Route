@@ -9,10 +9,10 @@ const Category = () => {
 
     <ul>
         <li>
-           <button> <Link to = {`/category/121`}> L1 </Link></button>
+            <Link to = {`/category/121`}> L1 </Link>
         </li>
         <li>
-           <button> <Link to ={`/category/122`} style={{color:'green'}}> L2 </Link></button>
+           <Link to ={`/category/122`} style={{color:'green'}}> L2 </Link>
         </li>
     </ul>
 
